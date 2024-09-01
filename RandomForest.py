@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 df= pd.read_csv('bus_maintenance_data.csv')
                
 X = df[['Mileage', 'Bus_Age', 'Trips_per_Day', 'Avg_Speed', 'Fuel_Type', 'Road_Type', 'Stops']]
-y = df['Maintenance_Cost']
+y = df['Maintenance_cost']
 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
